@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 number = 98
-print(f"{number} Battery street")
+if (ab = number) != 0 : print(f"{ab} Battery street")
