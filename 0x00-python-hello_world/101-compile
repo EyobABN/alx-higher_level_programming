@@ -1,0 +1,7 @@
+#!/bin/bash
+TEMP="${PYFILE}c"
+echo $TEMP
+python3 -m compileall $PYFILE
+mv __pycache__/*.pyc .
+rmdir __pycache__
+mv *.pyc $TEMP
