@@ -3,10 +3,10 @@ if __name__ == "__main__":
     import sys
     from calculator_1 import add, sub, mul, div
     av = sys.argv
-    op = av[2]
     if len(av) != 4:
         print("Usage: {} <a> <operator> <b>".format(av[0]))
         sys.exit(1)
+    op = av[2]
     if (op == "+" or op == "-" or op == "*" or op == "/") is False:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
