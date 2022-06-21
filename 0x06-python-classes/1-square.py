@@ -6,5 +6,5 @@ write an empty class Square that defines a square """
 class Square:
     """ an empty class that defines a square """
     def __init__(self, size):
-        """ initializer function for instantiated objects """
+        """ initializer function for instantiated object(s) """
         self.__size = size
