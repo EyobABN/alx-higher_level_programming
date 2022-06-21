@@ -11,22 +11,22 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        self.size = size
+        self.__size = size
 
+    @property
     def size(self):
         """ getter function """
-        return self.size
+        return self.__size
 
+    @size.setter
     def size(self, value):
         """ setter function """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
-        self.size = value
+        self.__size = value
 
     def area(self):
         """ public instance method """
-        if not isinstance(self.size, int):
-            raise TypeError("size must be an integer")
         return self.size ** 2
