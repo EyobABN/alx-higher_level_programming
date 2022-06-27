@@ -5,4 +5,7 @@
 
 
 class Rectangle:
+    """
+        creates a Rectangle object
+    """
     pass
