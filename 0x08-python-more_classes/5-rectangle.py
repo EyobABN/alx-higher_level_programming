@@ -56,3 +56,12 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
         return (self.__height * (self.__width * "#" + "\n"))[:-1]
+
+    def __repr__(self):
+        """repr implementation"""
+        return "Rectangle(" + str(self.__width) + \
+            ", " + str(self.__height) + ")"
+
+    def __del__(self):
+        """del implementation"""
+        print("Bye rectangle...")
