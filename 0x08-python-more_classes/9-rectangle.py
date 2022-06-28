@@ -8,10 +8,15 @@ class Rectangle:
     """
         creates a Rectangle object
     """
+
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """initializes a Rectangle instance"""
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -55,4 +60,28 @@ class Rectangle:
         """builds the rectangle with the # symbol"""
         if self.__width == 0 or self.__height == 0:
             return ""
-        return (self.__height * (self.__width * "#" + "\n"))[:-1]
+        return (self.__height * (self.__width * str(self.print_symbol) +
+                "\n"))[:-1]
+
+    def __repr__(self):
+        """repr implementation"""
+        return "Rectangle(" + str(self.__width) + \
+            ", " + str(self.__height) + ")"
+
+    def __del__(self):
+        """del implementation"""
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
+
+    def bigger_or_equal(rect_1, rect_2):
+        """compares to Rectangle instances based on their area"""
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        return rect_1 if rect_1.area() >= rect_2.area() else rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        """returns a new Rectangle instance with widt == height == square"""
+        return cls(size, size)
