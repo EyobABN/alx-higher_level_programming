@@ -37,3 +37,17 @@ TypeError: div must be a number
 Traceback (most recent call last):
 	...
 ZeroDivisionError: division by zero
+>>> mat(matrix)
+Traceback (most recent call last):
+	...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+>>> mat()
+Traceback (most recent call last):
+	...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+>>> matrix = [
+...	[0.0, 0.0]
+... ]
+...
+>>> mat(matrix, 3)
+[[0.0, 0.0]]
