@@ -8,12 +8,12 @@ def add_integer(a, b=98):
     """
         adds two integers
     """
-    ca = type(a) is int or type(a) is float
-    cb = type(b) is int or type(b) is float
+    ca = type(a) is not int and type(a) is not float
+    cb = type(b) is not int and type(b) is not float
 
-    if not ca:
+    if a is None or ca:
         raise TypeError("a must be an integer")
-    if not cb:
+    if cb:
         raise TypeError("b must be an integer")
     return int(a) + int(b)
 
