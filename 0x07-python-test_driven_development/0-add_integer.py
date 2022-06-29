@@ -3,6 +3,7 @@
     Module for adding two integers
 """
 
+
 def add_integer(a, b=98):
     """
         adds two integers
@@ -15,6 +16,7 @@ def add_integer(a, b=98):
     if not cb:
         raise TypeError("b must be an integer")
     return int(a) + int(b)
+
 
 if __name__ == "__main__":
     import doctest
