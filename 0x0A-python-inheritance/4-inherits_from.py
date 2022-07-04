@@ -8,4 +8,4 @@ def inherits_from(obj, a_class):
     """
         function for inheritance
     """
-    return isinstance(obj, a_class)
+    return issubclass(obj.__class__, a_class) and a_class is not bool
