@@ -1,5 +1,7 @@
 >>> BG = __import__("7-base_geometry").BaseGeometry
 >>> bg = BG()
+>>> type(bg) is BG
+True
 >>> bg.integer_validator("my", 12)
 >>> bg.integer_validator("wi", 89)
 >>> bg.integer_validator("na", "Jo")
