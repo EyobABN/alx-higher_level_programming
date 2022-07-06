@@ -17,7 +17,7 @@ class Student:
         """
             retrieves a dictionary representation of a Student instance
         """
-        if bool(attrs) and all(isinstance(elem, str) for elem in attrs):
+        if isinstance(attrs, list):
             dct = {}
             for elem in attrs:
                 if hasattr(self, elem):
