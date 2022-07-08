@@ -46,10 +46,8 @@ Traceback (most recent call last):
 	...
 TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
 >>> matrix = [
-...	[0.0, 0.0]
+...	[123, 456]
 ... ]
 ...
->>> mat(matrix, 0.0)
-Traceback (most recent call last):
-	...
-ZeroDivisionError: division by zero
+>>> mat(matrix, float('inf'))
+[[0.0, 0.0]]
