@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    prints the first State object from the database hbtn_0e_6_usa
+    changes the name of the State object where id=2 to New Mexico
 """
 
 
@@ -17,6 +17,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=eng)
     session = Session()
     state = session.query(State).filter_by(id=2).first()
-    satte.name = "New Mexico"
+    state.name = "New Mexico"
     session.commit()
     session.close()
