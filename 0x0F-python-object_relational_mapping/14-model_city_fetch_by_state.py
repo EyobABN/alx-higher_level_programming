@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    changes the name of the State object where id=2 to New Mexico
+    prints all City objects from the database hbtn_0e_14_usa
 """
 
 
@@ -17,8 +17,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     Session = sessionmaker(bind=eng)
     session = Session()
-    states = session.query(City, State).filter(City.state_id == State.id)\
-                    .order_by(City.id).all()
+    rows = session.query(City, State).filter(City.state_id == State.id)\
+        .order_by(City.id).all()
     for city, state in rows:
         print("{}: ({}) {}".format(state.name, city.id, city.name))
     session.close()
