@@ -6,5 +6,4 @@ const myDict = Object.entries(dict).reduce((acc, [key, value]) => {
   return acc;
 }, {});
 
-console.log(dict);
 console.log(myDict);
