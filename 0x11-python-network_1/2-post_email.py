@@ -8,7 +8,7 @@ import sys
 from urllib import request, parse
 
 
-if __name__ == "__name__":
+if __name__ == "__main__":
     if len(sys.argv) > 2:
         url = sys.argv[1]
         email = sys.argv[2]
