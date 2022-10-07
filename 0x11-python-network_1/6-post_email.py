@@ -9,8 +9,9 @@ import requests
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
+    if len(sys.argv) > 2:
         url = sys.argv[1]
-        response = requests.get(url)
-        if 'X-Request-Id' in response.headers:
-            print(response.headers['X-Request-Id'])
+        email = sys.argv[2]
+        form_data = [('email', email)]
+        response = requests.post(url, data=form_data)
+        print(response.text)
