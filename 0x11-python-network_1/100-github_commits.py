@@ -19,7 +19,7 @@ if __name__ == "__main__":
                 'per_page=10'
         )
         response = requests.get(
-                req.url,
+                req_url,
                 headers={'Accept': 'application/vnd.github.v3+json'}
         )
         if response.status_code == 200:
