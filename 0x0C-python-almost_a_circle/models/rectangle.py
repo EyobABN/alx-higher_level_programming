@@ -95,3 +95,13 @@ class Rectangle(Base):
         """Creates a string representation of the object"""
         return f'[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
 {self.__width}/{self.__height}'
+
+    def update(self, *args, **kwargs):
+        """Updates the attributes of this polygon"""
+        attrs = ('id', '__width', '__height', '__x', '__y')
+        for key, val in zip(attrs, args):
+            setattr(self, key, val)
+        if (type(args) is None or len(args) == 0) and (type(kwargs) is dict):
+            for key, val in kwargs.items():
+                if key in attrs:
+                    setattr(self, key, val)
