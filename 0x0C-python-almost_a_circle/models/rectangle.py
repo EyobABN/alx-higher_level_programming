@@ -98,7 +98,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """Updates the attributes of this polygon"""
-        attrs = ('id', '__width', '__height', '__x', '__y')
+        attrs = ('id', 'width', 'height', 'x', 'y')
         for key, val in zip(attrs, args):
             setattr(self, key, val)
         if (type(args) is None or len(args) == 0) and (type(kwargs) is dict):
