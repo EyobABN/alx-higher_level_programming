@@ -9,7 +9,7 @@ class Base:
         class for Base
     """
     __nb_objects = 0
-    
+
     def __init__(self, id=None):
         """Initializes a new polygon object with the given id.
 
