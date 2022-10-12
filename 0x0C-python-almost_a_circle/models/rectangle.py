@@ -90,3 +90,8 @@ class Rectangle(Base):
         h_val = '#' * self.__width
         print('\n' * self.__y, end='')
         print('{:s}{:s}\n'.format(h_off, h_val) * self.__height, end='')
+
+    def __str__(self):
+        """Creates a string representation of the object"""
+        return f'[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
+{self.__width}/{self.__height}'
