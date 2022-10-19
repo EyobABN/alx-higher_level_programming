@@ -13,7 +13,7 @@ if (process.argv.length > 2) {
         if (!aggregate[element.userId]) {
           aggregate[element.userId] = 0;
         }
-        aggregate[element.userID]++;
+        aggregate[element.userId]++;
       }
     });
     console.log(aggregate);
